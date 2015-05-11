@@ -1,7 +1,7 @@
 inherit cmake
 
 NAME="eigen3"
-VERSION=3.2.2
+VERSION=3.2.4
 RELEASE=1
 CATEGORY="Devel"
 SUMMARY="C++ template library for linear algebra"
@@ -12,7 +12,7 @@ OpenGL apps, spreadsheets and other office apps, etc. Eigen is dedicated to
 providing optimal speed with GCC."
 HOMEPAGE="http://eigen.tuxfamily.org/"
 SRC_URI="http://bitbucket.org/eigen/eigen/get/${VERSION}.tar.bz2#/eigen-${VERSION}.tar.bz"
-SRC_DIR="eigen-eigen-1306d75b4a21"
+SRC_DIR="eigen-eigen-10219c95fe65"
 
 ARCH=noarch
 
