@@ -1,7 +1,7 @@
-inherit cmake
+inherit cmake ninja
 
 NAME="eigen3"
-VERSION=3.3.4
+VERSION=3.3.8
 RELEASE=1
 CATEGORY="Devel"
 SUMMARY="C++ template library for linear algebra"
@@ -11,8 +11,14 @@ focuses on the simple mathematical needs of applications: games and other
 OpenGL apps, spreadsheets and other office apps, etc. Eigen is dedicated to
 providing optimal speed with GCC."
 HOMEPAGE="http://eigen.tuxfamily.org/"
-SRC_URI="http://bitbucket.org/eigen/eigen/get/${VERSION}.tar.bz2#/eigen-${VERSION}.tar.bz"
-SRC_DIR="eigen-eigen-5a0156e40feb"
+SRC_URI="https://gitlab.com/libeigen/eigen/-/archive/${VERSION}/eigen-${VERSION}.tar.bz2"
+SRC_DIR="eigen-${VERSION}"
+
+BUILD_REQUIES="\
+  cmake\
+  ninja\
+  pkg-config\
+"
 
 ARCH=noarch
 
