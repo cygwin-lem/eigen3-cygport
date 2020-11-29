@@ -14,7 +14,7 @@ HOMEPAGE="http://eigen.tuxfamily.org/"
 SRC_URI="https://gitlab.com/libeigen/eigen/-/archive/${VERSION}/eigen-${VERSION}.tar.bz2"
 SRC_DIR="eigen-${VERSION}"
 
-BUILD_REQUIES="\
+BUILD_REQUIRES="\
   cmake\
   ninja\
   pkg-config\
