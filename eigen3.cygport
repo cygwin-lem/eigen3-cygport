@@ -1,7 +1,7 @@
 inherit cmake ninja
 
 NAME="eigen3"
-VERSION=3.4.0
+VERSION=3.4.1
 RELEASE=1
 CATEGORY="Devel"
 SUMMARY="C++ template library for linear algebra"
