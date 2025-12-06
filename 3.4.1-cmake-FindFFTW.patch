@@ -1,0 +1,12 @@
+--- origsrc/eigen-3.4.1/cmake/FindFFTW.cmake
++++ src/eigen-3.4.1/cmake/FindFFTW.cmake
+@@ -37,6 +37,9 @@ if( ${FFTW_USE_STATIC_LIBS} )
+   set( CMAKE_FIND_LIBRARY_SUFFIXES ${CMAKE_STATIC_LIBRARY_SUFFIX} )
+ else()
+   set( CMAKE_FIND_LIBRARY_SUFFIXES ${CMAKE_SHARED_LIBRARY_SUFFIX} )
++  if ( CYGWIN )
++    set( CMAKE_FIND_LIBRARY_SUFFIXES "${CMAKE_SHARED_LIBRARY_SUFFIX}.a" )
++  endif()
+ endif()
+ 
+ if( FFTW_ROOT )

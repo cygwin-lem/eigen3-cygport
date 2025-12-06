@@ -19,13 +19,24 @@ LICENSE="MPL-2.0"
 SRC_URI="https://gitlab.com/libeigen/eigen/-/archive/${VERSION}/eigen-${VERSION}.tar.bz2"
 SRC_DIR="eigen-${VERSION}"
 
+PATCH_URI_LIST=(
+  #3.4.1-cmake-FindFFTW.patch
+)
+PATCH_URI+=" ${PATCH_URI_LIST[*]}"
+
 BUILD_REQUIRES="\
   cmake\
   ninja\
   pkg-config\
 "
+#  gcc-fortran\
+#  libboost-devel\
+#  libfftw3-devel\
+#  libmpfr-devel\
+#  libspqr-devel\
+#
 
-ARCH=noarch
+#ARCH=noarch
 
 CYGCMAKE_ARGS_LIST=(
   -DEIGEN_BUILD_TESTING:BOOL=OFF
